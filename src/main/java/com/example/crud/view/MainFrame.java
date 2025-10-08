@@ -36,6 +36,26 @@ public class MainFrame extends JFrame {
         });
         cadastrosMenu.add(produtosMenuItem);
 
+        JMenuItem precosMenuItem = new JMenuItem("Preços");
+        precosMenuItem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                PrecoView precoView = new PrecoView();
+                precoView.setVisible(true);
+            }
+        });
+        cadastrosMenu.add(precosMenuItem);
+
+        JMenuItem estoqueMenuItem = new JMenuItem("Estoque");
+        estoqueMenuItem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                EstoqueView estoqueView = new EstoqueView();
+                estoqueView.setVisible(true);
+            }
+        });
+        cadastrosMenu.add(estoqueMenuItem);
+
         setJMenuBar(menuBar);
     }
 }
